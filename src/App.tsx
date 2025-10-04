@@ -13,6 +13,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HackathonBrowse from "./components/HackathonBrowse";
 import HackathonPage from "./pages/hackathons";
+import OrganizerLogin from "./pages/OrganizerLogin";
+import OrganizerSignup from "./pages/OrganizerSignup";
 import SpacesPage from "./components/ui/Spaces";
 import AboutPage from "./components/ui/aboutus";
 
@@ -38,6 +40,8 @@ const App = () => (
               <Route path="/feed" element={<Feed />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
+              <Route path="/organizer-signup" element={<OrganizerSignup />} />
+              <Route path="/organizer-login" element={<OrganizerLogin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
