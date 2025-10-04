@@ -38,20 +38,20 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 ">
             <Link to="/hackathons" className="text-foreground/80 hover:text-foreground transition-colors">
               Hackathons
             </Link>
             <Link to="/feed" className="text-foreground/80 hover:text-foreground transition-colors">
               Feeds
             </Link>
-            <a href="/#spaces" className="text-foreground/80 hover:text-foreground transition-colors">
+            <a href="/spaces" className="text-foreground/80 hover:text-foreground transition-colors">
               Spaces
             </a>
             <a href="/#sponsors" className="text-foreground/80 hover:text-foreground transition-colors">
               Sponsors
             </a>
-            <a href="/#about" className="text-foreground/80 hover:text-foreground transition-colors">
+            <a href="/aboutus" className="text-foreground/80 hover:text-foreground transition-colors">
               About
             </a>
           </div>
@@ -115,7 +115,7 @@ const Header = () => {
             <Link to="/feed" className="block text-foreground/80 hover:text-foreground transition-colors">
               Hackathons
             </Link>
-            <a href="#spaces" className="block text-foreground/80 hover:text-foreground transition-colors">
+            <a href="/spaces" className="block text-foreground/80 hover:text-foreground transition-colors">
               Spaces
             </a>
             <a href="#sponsors" className="block text-foreground/80 hover:text-foreground transition-colors">

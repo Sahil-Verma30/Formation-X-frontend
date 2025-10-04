@@ -13,6 +13,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HackathonBrowse from "./components/HackathonBrowse";
 import HackathonPage from "./pages/hackathons";
+import SpacesPage from "./components/ui/Spaces";
+import AboutPage from "./components/ui/aboutus";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/hackathons" element={<HackathonPage /> } />
+              <Route path="/spaces" element={<SpacesPage /> } />
+              <Route path="/aboutus" element={<AboutPage /> } />
               <Route path="/hackathon/:id" element={<HackathonDetails />} />
               <Route path="/feed" element={<Feed />} />
               <Route path="/login" element={<Login />} />

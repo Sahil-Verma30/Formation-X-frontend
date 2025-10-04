@@ -18,10 +18,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Platform</h4>
             <ul className="space-y-2 text-sm text-foreground/60">
-              <li><a href="#hackathons" className="hover:text-foreground transition-colors">Browse Hackathons</a></li>
-              <li><a href="#spaces" className="hover:text-foreground transition-colors">Find Spaces</a></li>
+              <li><a href="hackathons" className="hover:text-foreground transition-colors">Browse Hackathons</a></li>
+              <li><a href="spaces" className="hover:text-foreground transition-colors">Find Spaces</a></li>
               <li><a href="#sponsors" className="hover:text-foreground transition-colors">Sponsors</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Organize Event</a></li>
+              <li><a href="/" className="hover:text-foreground transition-colors">Organize Event</a></li>
             </ul>
           </div>
 
