@@ -10,9 +10,9 @@ export default function SpacesPage() {
   const [filters, setFilters] = useState({ city: '', date: '' });
 
   const spaces = [
-    { id: 1, name: "Innovate Hub", city: "Bangalore", date: "2025-10-10", image: "/spaces1.jpg" },
-    { id: 2, name: "Creators Loft", city: "Delhi", date: "2025-10-15", image: "/spaces2.jpg" },
-    { id: 3, name: "Tech Den", city: "Mumbai", date: "2025-10-08", image: "/spaces3.jpg" },
+    { id: 1, name: "Innovate Hub", city: "Bangalore", date: "2025-10-10", image: "spaces1.png" },
+    { id: 2, name: "Creators Loft", city: "Delhi", date: "2025-10-15", image: "spaces2.png" },
+    { id: 3, name: "Tech Den", city: "Mumbai", date: "2025-10-08", image: "spaces3.png" },
   ];
 
   const filteredSpaces = spaces.filter(space => {
