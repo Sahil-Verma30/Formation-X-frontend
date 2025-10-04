@@ -31,7 +31,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Link to="/" className="flex items-center gap-2">
-              <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <img
+              src="logo1.png" 
+              className="h-10 w-auto sm:h-12 object-contain"
+            />
+              <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-white">
                 Formation X
               </span>
             </Link>

@@ -7,7 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-gradient-primary" />
+              {/* <div className="h-8 w-8 rounded-lg bg-gradient-primary" /> */}
+              <img
+              src="logo1.png" 
+              className="h-10 w-auto sm:h-12 object-contain"
+            />
               <span className="text-xl font-bold">Formation X</span>
             </div>
             <p className="text-foreground/60 text-sm">

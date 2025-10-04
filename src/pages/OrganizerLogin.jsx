@@ -19,8 +19,8 @@ const OrganizerLogin = () => {
   return (
     <div className="flex min-h-screen">
       {/* Left section */}
-      <div className="hidden md:flex w-1/2 bg-cover bg-center" >
-        <div className="bg-black/50 w-full flex items-center justify-center text-center text-white px-10">
+      <div className="hidden md:flex w-1/2 bg-cover bg-center " >
+        <div className="bg-black/50 w-full flex items-center justify-center text-center text-white ">
           <div>
             <h2 className="text-4xl font-bold mb-4">Welcome Back, Organizer!</h2>
             <p className="text-lg opacity-80">
@@ -31,10 +31,10 @@ const OrganizerLogin = () => {
       </div>
 
       {/* Right section */}
-      <div className="flex w-full md:w-1/2 items-center justify-center px-8 py-12">
+      <div className="flex w-full md:w-1/2 items-center justify-center  py-12">
         <div className="w-full max-w-md space-y-6">
           <h2 className="text-3xl font-bold text-center mb-6">Organizer Login</h2>
-          <form onSubmit={handleLogin} className="space-y-4">
+          <form onSubmit={handleLogin} className="space-y-4 ">
             <input
               type="email"
               placeholder="Email address"

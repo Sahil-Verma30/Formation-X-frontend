@@ -44,7 +44,7 @@ const Hero = () => {
             Explore Hackathons
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button variant="outline" size="lg">
+          <Button variant="outline" onClick={() => {navigate("/organizer-login")}} size="lg">
             Organize Your Event
           </Button>
         </div>
