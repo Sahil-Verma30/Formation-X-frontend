@@ -17,6 +17,10 @@ import OrganizerLogin from "./pages/OrganizerLogin";
 import OrganizerSignup from "./pages/OrganizerSignup";
 import SpacesPage from "./components/ui/Spaces";
 import AboutPage from "./components/ui/aboutus";
+import Dashboard from "./pages/Dashboard";
+import { AppLayout } from "./components/layout/AppLayout";
+import FoodDistribution from "./pages/FoodDistribution";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +46,9 @@ const App = () => (
               <Route path="/signup" element={<SignUp />} />
               <Route path="/organizer-signup" element={<OrganizerSignup />} />
               <Route path="/organizer-login" element={<OrganizerLogin />} />
+              <Route path="/dashboard" element={<AppLayout><Dashboard /></AppLayout>} />
+              <Route path="/dashboard/food-distribution" element={<AppLayout><FoodDistribution /></AppLayout>} />
+              <Route path="/dashboard/settings" element={<AppLayout><Settings /></AppLayout>} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

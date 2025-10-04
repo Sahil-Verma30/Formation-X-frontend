@@ -107,23 +107,42 @@ const SidebarProvider = React.forwardRef<
 
   return (
     <SidebarContext.Provider value={contextValue}>
-      <TooltipProvider delayDuration={0}>
-        <div
-          style={
-            {
-              "--sidebar-width": SIDEBAR_WIDTH,
-              "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
-              ...style,
-            } as React.CSSProperties
-          }
-          className={cn("group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar", className)}
-          ref={ref}
-          {...props}
-        >
-          {children}
-        </div>
-      </TooltipProvider>
-    </SidebarContext.Provider>
+    <TooltipProvider delayDuration={0}>
+      <div
+        style={{
+          "--sidebar-width": SIDEBAR_WIDTH,
+          "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
+          ...style,
+        } as React.CSSProperties}
+        className={cn(
+          "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar mt-16", // <-- added mt-4
+          className
+        )}
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </div>
+    </TooltipProvider>
+  </SidebarContext.Provider>
+    // <SidebarContext.Provider value={contextValue}>
+    //   <TooltipProvider delayDuration={0}>
+    //     <div
+    //       style={
+    //         {
+    //           "--sidebar-width": SIDEBAR_WIDTH,
+    //           "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
+    //           ...style,
+    //         } as React.CSSProperties
+    //       }
+    //       className={cn("group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar", className)}
+    //       ref={ref}
+    //       {...props}
+    //     >
+    //       {children}
+    //     </div>
+    //   </TooltipProvider>
+    // </SidebarContext.Provider>
   );
 });
 SidebarProvider.displayName = "SidebarProvider";

@@ -12,7 +12,7 @@ const OrganizerLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await login(identifier, password);
+    await login({identifier, password});
     setLoading(false);
   };
 

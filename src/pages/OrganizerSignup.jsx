@@ -13,7 +13,7 @@ const OrganizerSignup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await signup(username, email, password);
+    await signup({username, email, password});
     setLoading(false);
   };
 
