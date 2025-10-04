@@ -11,6 +11,8 @@ import { Login } from "./components/Login";
 import { SignUp } from "./components/SignUp";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import HackathonBrowse from "./components/HackathonBrowse";
+import HackathonPage from "./pages/hackathons";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,7 @@ const App = () => (
           <main className="min-h-[calc(100vh-8rem)]"> {/* adjust height if needed */}
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/hackathons" element={<HackathonPage /> } />
               <Route path="/hackathon/:id" element={<HackathonDetails />} />
               <Route path="/feed" element={<Feed />} />
               <Route path="/login" element={<Login />} />
