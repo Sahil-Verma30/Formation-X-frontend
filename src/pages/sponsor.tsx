@@ -3,16 +3,11 @@ import React, { useState } from "react";
 const SponsorPage: React.FC = () => {
   const [popupVisible, setPopupVisible] = useState(false);
 
-  const handleClick = () => {
-    setPopupVisible(true);
-  };
-
-  const closePopup = () => {
-    setPopupVisible(false);
-  };
+  const handleClick = () => setPopupVisible(true);
+  const closePopup = () => setPopupVisible(false);
 
   return (
-    <div className="bg-black min-h-screen text-white px-6 py-24"> {/* Increased top padding */}
+    <div className="bg-black min-h-screen text-white px-6 py-24"> {/* Top padding */}
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-14">
         <h1 className="text-4xl font-bold">
@@ -27,9 +22,9 @@ const SponsorPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Cards Section */}
+      {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        {/* Organizer Card */}
+        {/* Organizer */}
         <div className="bg-gradient-to-br from-[#1a1a2e] to-[#111122] border border-gray-800 rounded-xl p-8">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-sky-400 text-xl">✨</span>
@@ -45,14 +40,14 @@ const SponsorPage: React.FC = () => {
             <li>• Real-time funding updates</li>
           </ul>
           <button
-            onClick={handleClick}
+            onClick={handleClick} // <-- Popup triggered here
             className="w-full border border-sky-500 text-white py-2 rounded-md hover:bg-sky-600 transition"
           >
             Start Pitching →
           </button>
         </div>
 
-        {/* Sponsor Card */}
+        {/* Sponsor */}
         <div className="bg-gradient-to-br from-[#1a1a2e] to-[#111122] border border-gray-800 rounded-xl p-8">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-violet-400 text-xl">✨</span>
@@ -68,7 +63,7 @@ const SponsorPage: React.FC = () => {
             <li>• Impact analytics dashboard</li>
           </ul>
           <button
-            onClick={handleClick}
+            onClick={handleClick} // <-- Popup triggered here too
             className="w-full border border-violet-500 text-white py-2 rounded-md hover:bg-violet-600 transition"
           >
             Become a Sponsor →
