@@ -41,15 +41,15 @@ const FoodDistribution = () => {
   const [participants, setParticipants] = useState<Participant[]>([
     {
       id: "1",
-      name: "John Doe",
-      email: "john@example.com",
+      name: "Shourya Singh",
+      email: "shoury@example.com",
       team: "Team Alpha",
       meals: { breakfast: true, lunch: false, dinner: false, snacks: true },
     },
     {
       id: "2",
-      name: "Jane Smith",
-      email: "jane@example.com",
+      name: "Sahil",
+      email: "Sahil@example.com",
       team: "Team Beta",
       meals: { breakfast: false, lunch: false, dinner: false, snacks: false },
     },

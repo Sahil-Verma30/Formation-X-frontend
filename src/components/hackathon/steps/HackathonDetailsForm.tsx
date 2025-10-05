@@ -4,20 +4,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { CalendarIcon, Plus, X } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-
-interface HackathonDetailsFormProps {
-  initialData: {
-    name: string;
-    university: string;
-    hasFee: string;
-  };
-  onComplete: () => void;
-}
+import {useHackathonStore} from "@/store/useHackathonStore";
 
 interface Partner {
   id: string;
@@ -38,19 +34,20 @@ interface FAQ {
   answer: string;
 }
 
-export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetailsFormProps) {
+export function HackathonDetailsForm({
+  initialData,
+  onComplete,
+}) {
   const [formData, setFormData] = useState({
-    name: initialData.name,
-    tagline: "",
+    title: initialData.name, // <-- was 'name'
+    description: "", // <-- was 'tagline'
     about: "",
-    theme: "",
-    expectedParticipants: "",
+    category: "", // <-- was 'theme'
+    rsvp: "", // <-- was 'expectedParticipants'
     minTeamSize: "",
     maxTeamSize: "",
     venue: "",
-    website: "",
     logo: "",
-    favicon: "",
     applicationOpen: undefined as Date | undefined,
     applicationClose: undefined as Date | undefined,
     hackathonBegin: undefined as Date | undefined,
@@ -71,33 +68,47 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
   const [prizes, setPrizes] = useState<Prize[]>([]);
   const [faqs, setFAQs] = useState<FAQ[]>([]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate required fields
-    if (!formData.name || !formData.tagline || !formData.about) {
+    if (!formData.title || !formData.description || !formData.about) {
       toast.error("Please fill in all required fields");
       return;
     }
+    const { createHackathon } = useHackathonStore.getState();
+    const res = await createHackathon(formData);
+
+    console.log("Submitting Hackathon Details:", formData);
+    console.log("Required Participant Fields:", requiredFields);
+    console.log("Partners:", partners);
+    console.log("Prizes:", prizes);
+    console.log("FAQs:", faqs);
 
     toast.success("Hackathon created successfully!");
     onComplete();
   };
 
   const addPartner = () => {
-    setPartners([...partners, { id: Date.now().toString(), name: "", logo: "" }]);
+    setPartners([
+      ...partners,
+      { id: Date.now().toString(), name: "", logo: "" },
+    ]);
   };
 
   const removePartner = (id: string) => {
-    setPartners(partners.filter(p => p.id !== id));
+    setPartners(partners.filter((p) => p.id !== id));
   };
 
   const addPrize = () => {
-    setPrizes([...prizes, { id: Date.now().toString(), title: "", amount: "", description: "" }]);
+    setPrizes([
+      ...prizes,
+      { id: Date.now().toString(), title: "", amount: "", description: "" },
+    ]);
   };
 
   const removePrize = (id: string) => {
-    setPrizes(prizes.filter(p => p.id !== id));
+    setPrizes(prizes.filter((p) => p.id !== id));
   };
 
   const addFAQ = () => {
@@ -105,7 +116,7 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
   };
 
   const removeFAQ = (id: string) => {
-    setFAQs(faqs.filter(f => f.id !== id));
+    setFAQs(faqs.filter((f) => f.id !== id));
   };
 
   return (
@@ -113,14 +124,16 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
       {/* Basic Information */}
       <section className="space-y-4">
         <h3 className="text-lg font-semibold">Basic Information</h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="name">Name *</Label>
             <Input
-              id="name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              id="title"
+              value={formData.title}
+              onChange={(e) =>
+                setFormData({ ...formData, title: e.target.value })
+              }
               required
             />
           </div>
@@ -128,10 +141,11 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
           <div className="space-y-2">
             <Label htmlFor="tagline">Tagline *</Label>
             <Input
-              id="tagline"
-              placeholder="A short catchy tagline"
-              value={formData.tagline}
-              onChange={(e) => setFormData({ ...formData, tagline: e.target.value })}
+              id="description"
+              value={formData.description}
+              onChange={(e) =>
+                setFormData({ ...formData, description: e.target.value })
+              }
               required
             />
           </div>
@@ -143,7 +157,9 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
             id="about"
             placeholder="Describe your hackathon..."
             value={formData.about}
-            onChange={(e) => setFormData({ ...formData, about: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, about: e.target.value })
+            }
             className="min-h-32"
             required
           />
@@ -151,23 +167,36 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
-            <Label htmlFor="theme">Theme</Label>
-            <Input
-              id="theme"
-              placeholder="e.g., AI, Blockchain, Web3"
-              value={formData.theme}
-              onChange={(e) => setFormData({ ...formData, theme: e.target.value })}
-            />
-          </div>
+  <Label htmlFor="category">Theme</Label>
+  <select
+    id="category"
+    value={formData.category}
+    onChange={(e) =>
+      setFormData({ ...formData, category: e.target.value })
+    }
+    className="w-full p-2 border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  >
+    <option value="">Select Theme</option>
+    <option value="WebDevelopment">Web Development</option>
+    <option value="AIML">AI / ML</option>
+    <option value="Web3Hackathon">Web3 Hackathon</option>
+    <option value="IdeationHackathon">Ideation Hackathon</option>
+    <option value="FinTech">FinTech</option>
+    <option value="GamingARVR">Gaming / AR / VR</option>
+    <option value="ProblemSolvingHackathon">Problem Solving Hackathon</option>
+  </select>
+</div>
+
 
           <div className="space-y-2">
             <Label htmlFor="expectedParticipants">Expected Participants</Label>
             <Input
-              id="expectedParticipants"
+              id="rsvp"
+              value={formData.rsvp}
               type="number"
-              placeholder="Approximate number"
-              value={formData.expectedParticipants}
-              onChange={(e) => setFormData({ ...formData, expectedParticipants: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, rsvp: e.target.value })
+              }
             />
           </div>
         </div>
@@ -176,16 +205,18 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
       {/* Team Size */}
       <section className="space-y-4">
         <h3 className="text-lg font-semibold">Team Configuration</h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="minTeamSize">Minimum Team Size</Label>
             <Input
               id="minTeamSize"
-              type="number"
+              type="text"
               min="1"
               value={formData.minTeamSize}
-              onChange={(e) => setFormData({ ...formData, minTeamSize: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, minTeamSize: e.target.value })
+              }
             />
           </div>
 
@@ -193,10 +224,12 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
             <Label htmlFor="maxTeamSize">Maximum Team Size</Label>
             <Input
               id="maxTeamSize"
-              type="number"
+              type="text"
               min="1"
               value={formData.maxTeamSize}
-              onChange={(e) => setFormData({ ...formData, maxTeamSize: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, maxTeamSize: e.target.value })
+              }
             />
           </div>
         </div>
@@ -205,19 +238,21 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
       {/* Venue & Links */}
       <section className="space-y-4">
         <h3 className="text-lg font-semibold">Venue & Online Presence</h3>
-        
+
         <div className="space-y-2">
           <Label htmlFor="venue">Venue</Label>
           <Input
             id="venue"
             placeholder="Physical address or online platform"
             value={formData.venue}
-            onChange={(e) => setFormData({ ...formData, venue: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, venue: e.target.value })
+            }
           />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <Label htmlFor="website">Hackathon Website Link</Label>
             <Input
               id="website"
@@ -226,18 +261,20 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
               value={formData.website}
               onChange={(e) => setFormData({ ...formData, website: e.target.value })}
             />
-          </div>
+          </div> */}
 
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <Label htmlFor="logo">Hackathon Logo URL</Label>
             <Input
               id="logo"
               type="url"
               placeholder="https://"
               value={formData.logo}
-              onChange={(e) => setFormData({ ...formData, logo: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, logo: e.target.value })
+              }
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="space-y-2">
@@ -246,8 +283,8 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
             id="favicon"
             type="url"
             placeholder="https://"
-            value={formData.favicon}
-            onChange={(e) => setFormData({ ...formData, favicon: e.target.value })}
+            value={formData.logo}
+            onChange={(e) => setFormData({ ...formData, logo: e.target.value })}
           />
         </div>
       </section>
@@ -255,7 +292,7 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
       {/* Important Dates */}
       <section className="space-y-4">
         <h3 className="text-lg font-semibold">Important Dates</h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label>Application Open</Label>
@@ -269,14 +306,18 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
-                  {formData.applicationOpen ? format(formData.applicationOpen, "PPP") : "Pick a date"}
+                  {formData.applicationOpen
+                    ? format(formData.applicationOpen, "PPP")
+                    : "Pick a date"}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
                   mode="single"
                   selected={formData.applicationOpen}
-                  onSelect={(date) => setFormData({ ...formData, applicationOpen: date })}
+                  onSelect={(date) =>
+                    setFormData({ ...formData, applicationOpen: date })
+                  }
                   initialFocus
                   className="pointer-events-auto"
                 />
@@ -296,14 +337,18 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
-                  {formData.applicationClose ? format(formData.applicationClose, "PPP") : "Pick a date"}
+                  {formData.applicationClose
+                    ? format(formData.applicationClose, "PPP")
+                    : "Pick a date"}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
                   mode="single"
                   selected={formData.applicationClose}
-                  onSelect={(date) => setFormData({ ...formData, applicationClose: date })}
+                  onSelect={(date) =>
+                    setFormData({ ...formData, applicationClose: date })
+                  }
                   initialFocus
                   className="pointer-events-auto"
                 />
@@ -323,14 +368,18 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
-                  {formData.hackathonBegin ? format(formData.hackathonBegin, "PPP") : "Pick a date"}
+                  {formData.hackathonBegin
+                    ? format(formData.hackathonBegin, "PPP")
+                    : "Pick a date"}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
                   mode="single"
                   selected={formData.hackathonBegin}
-                  onSelect={(date) => setFormData({ ...formData, hackathonBegin: date })}
+                  onSelect={(date) =>
+                    setFormData({ ...formData, hackathonBegin: date })
+                  }
                   initialFocus
                   className="pointer-events-auto"
                 />
@@ -350,14 +399,18 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
-                  {formData.submissionDeadline ? format(formData.submissionDeadline, "PPP") : "Pick a date"}
+                  {formData.submissionDeadline
+                    ? format(formData.submissionDeadline, "PPP")
+                    : "Pick a date"}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
                   mode="single"
                   selected={formData.submissionDeadline}
-                  onSelect={(date) => setFormData({ ...formData, submissionDeadline: date })}
+                  onSelect={(date) =>
+                    setFormData({ ...formData, submissionDeadline: date })
+                  }
                   initialFocus
                   className="pointer-events-auto"
                 />
@@ -370,8 +423,10 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
       {/* Required Participant Details */}
       <section className="space-y-4">
         <h3 className="text-lg font-semibold">Required Participant Details</h3>
-        <p className="text-sm text-muted-foreground">Select which fields are required from participants</p>
-        
+        <p className="text-sm text-muted-foreground">
+          Select which fields are required from participants
+        </p>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {Object.entries({
             firstName: "First Name",
@@ -382,11 +437,19 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
             phone: "Phone Number",
             email: "Email ID",
           }).map(([key, label]) => (
-            <label key={key} className="flex items-center space-x-2 cursor-pointer">
+            <label
+              key={key}
+              className="flex items-center space-x-2 cursor-pointer"
+            >
               <input
                 type="checkbox"
                 checked={requiredFields[key as keyof typeof requiredFields]}
-                onChange={(e) => setRequiredFields({ ...requiredFields, [key]: e.target.checked })}
+                onChange={(e) =>
+                  setRequiredFields({
+                    ...requiredFields,
+                    [key]: e.target.checked,
+                  })
+                }
                 className="rounded border-gray-300"
               />
               <span className="text-sm">{label}</span>
@@ -399,7 +462,12 @@ export function HackathonDetailsForm({ initialData, onComplete }: HackathonDetai
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold">Partners</h3>
-          <Button type="button" variant="outline" size="sm" onClick={addPartner}>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={addPartner}
+          >
             <Plus className="h-4 w-4 mr-2" />
             Add Partner
           </Button>

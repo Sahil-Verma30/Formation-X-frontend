@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuthStore } from "@/store/useAuthStore";
 // import bgImg from "@/assets/hackathon-bg.jpg";
 
 const OrganizerSignup = () => {
-  const { signup } = useAuthStore();
+  const { signup, user } = useAuthStore();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +16,13 @@ const OrganizerSignup = () => {
     await signup({username, email, password});
     setLoading(false);
   };
+
+    useEffect(() => {
+      if (user) {
+        // Redirect to dashboard or home if already logged in
+        window.location.href = "/dashboard";
+      }
+    }, [user]);
 
   return (
     <div className="flex min-h-screen">

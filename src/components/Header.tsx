@@ -52,7 +52,7 @@ const Header = () => {
             <a href="/spaces" className="text-foreground/80 hover:text-foreground transition-colors">
               Spaces
             </a>
-            <a href="/#sponsors" className="text-foreground/80 hover:text-foreground transition-colors">
+            <a href="/sponsors" className="text-foreground/80 hover:text-foreground transition-colors">
               Sponsors
             </a>
             <a href="/aboutus" className="text-foreground/80 hover:text-foreground transition-colors">

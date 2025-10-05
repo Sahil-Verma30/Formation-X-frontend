@@ -41,6 +41,7 @@ export const useAuthStore = create((set) => ({
   login: async ({ identifier, password }) => {
     set({ loading: true, error: null });
     try {
+        console.log("identifier", identifier, "password", password);
       const res = await axiosInstance.post("/auth/local", {
         identifier,
         password,

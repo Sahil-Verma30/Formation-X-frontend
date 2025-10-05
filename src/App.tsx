@@ -21,6 +21,7 @@ import Dashboard from "./pages/Dashboard";
 import { AppLayout } from "./components/layout/AppLayout";
 import FoodDistribution from "./pages/FoodDistribution";
 import Settings from "./pages/Settings";
+import SponsorPage from "./pages/sponsor";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
               <Route path="/hackathons" element={<HackathonPage /> } />
               <Route path="/spaces" element={<SpacesPage /> } />
               <Route path="/aboutus" element={<AboutPage /> } />
+              <Route path="/sponsors" element={<SponsorPage /> } />
               <Route path="/hackathon/:id" element={<HackathonDetails />} />
               <Route path="/feed" element={<Feed />} />
               <Route path="/login" element={<Login />} />
