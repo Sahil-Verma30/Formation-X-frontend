@@ -47,7 +47,8 @@ const OrganizerLogin = () => {
               placeholder="Email address"
               value={identifier}
               onChange={(e) => setIdentifier(e.target.value)}
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none"
+              style={{ color: 'black' }}
+              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none text-black"
               required
             />
             <input
@@ -55,6 +56,7 @@ const OrganizerLogin = () => {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              style={{ color: 'black' }}
               className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary outline-none"
               required
             />
