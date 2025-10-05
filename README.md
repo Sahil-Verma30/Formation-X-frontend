@@ -18,11 +18,6 @@ A modern, fast, and responsive web application built using **Vite**, **React**, 
 
 ---
 
-## Demo
-
-> Add your live demo link here  
-[Live Demo](https://your-project.vercel.app)
-
 ---
 
 ## Features
