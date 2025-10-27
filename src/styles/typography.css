@@ -1,0 +1,49 @@
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/font/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("/assets/font/CinzelDecorative-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/font/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("/assets/font/Anton-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/font/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/font/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display:swap;
+}
+

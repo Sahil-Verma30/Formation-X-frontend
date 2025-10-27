@@ -1,0 +1,813 @@
+[data-theme="forest"] {
+  --primary: #ffffff;
+  --secondary: #C9A66B;
+  --secondary-light: #F3EBDB;
+  --bg-col-1: #ffffff;
+  --bg-col-2: #B38B59;
+  --accent-1: #f9f6f2;
+  --accent-2: #2A2118;
+  --accent-3: #e0dcc0;
+  --btn-bg-1: #FCF9F5;
+  --btn-bg-2: #F8F3EC;
+  --nav-bg: #f9f6f2;
+  --btn-text-1: #ffffff;
+  --btn-text-2: #000000;
+  --btn-text-3: #a8a8a8;
+  --link-col-1: #E8D9C333;
+  --link-col-2: #B38B591A;
+  --text-1: #B38B59;
+  --text-2: #2A2118;
+  --text-3: #5A534a;
+  --title-color: #2A2118;
+  --sub-title-color: #5A534a;
+  --title-color-2: #D9C7A7;
+  --sub-title-color-2: #B38B59;
+  --card-header: #fffbe6;
+  --card-bg-1: #D9C7A7;
+  --card-bg-2: #f0fafd;
+  --brand-text-gradient-stop-1: #B38B59;
+  --brand-text-gradient-stop-2: #dab600;
+  --cyan: #0099b4;
+  --cyan-light: #7ed1e6;
+  --cyan-lighter: #e0f6fb;
+  --gold: #dab600;
+  --gold-light: #f0d948;
+  --gold-lighter: #fffbe6;
+  --black: #000000;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+
+[data-theme="navy"] {
+  --primary: #ffffff;
+  --secondary: #1f275d;
+  --secondary-light: #E6ECF5;
+  --bg-col-1: #ffffff;
+  --bg-col-2: #29306e;
+  --accent-1: #f5f7fc;
+  --accent-2: #13173d;
+  --accent-3: #d8dcef;
+  --btn-bg-1: #E6ECF5;  /* Light cool blue background */
+--btn-bg-2: #DCE4F0;  /* Slightly darker soft blue */
+
+  --nav-bg: #f5f7fc;
+  --btn-text-1: #ffffff;
+  --btn-text-2: #000000;
+  --btn-text-3: #a8a8a8;
+  --link-col-1: #1f275d33;
+  --link-col-2: #3d4a9f1a;
+  --text-1: #1f275d;
+  --text-2: #13173d;
+  --text-3: #5a5f84;
+  --title-color: #13173d;
+  --sub-title-color: #5a5f84;
+  --title-color-2: #A7B9D9;  /* Light desaturated blue */
+
+  --sub-title-color-2: #1f275d;
+  --card-header: #f7f8ff;
+  --card-bg-1: #e0e3f7;
+  --card-bg-2: #f0fafd;
+  --brand-text-gradient-stop-1: #1f275d;
+  --brand-text-gradient-stop-2: #3d4a9f;
+  --cyan: #0099b4;
+  --cyan-light: #7ed1e6;
+  --cyan-lighter: #e0f6fb;
+  --gold: #dab600;
+  --gold-light: #f0d948;
+  --gold-lighter: #fffbe6;
+  --black: #000000;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+
+[data-theme="ocean"] {
+  --primary: #ffffff;
+  --secondary: #4A90E2;
+  --secondary-light: #A8C8F0;
+
+  --bg-col-1: #ffffff;
+  --bg-col-2: #2D5985;
+  --accent-1: #F0F7FF;
+  --accent-2: #0A1F33;
+  --accent-3: #D4E3F5;
+
+ --btn-bg-1: #A8C8F0;  /* Light Ocean Blue (already in theme as secondary-light) */
+--btn-bg-2: #D4E3F5;
+
+  --nav-bg: #fff;
+
+  --btn-text-1: #ffffff;
+  --btn-text-2: #000000;
+  --btn-text-3: #a8a8a8;
+
+  --link-col-1: #ffffff;
+  --link-col-2: #4A90E2;
+
+  --text-1: #2D5985;
+  --text-2: #0A1F33;
+  --text-3: #000000;
+
+  --title-color: #4A90E2;
+  --sub-title-color: #ffffff;
+  --title-color-2: #4A90E2;
+  --sub-title-color-2: #ffffff;
+
+  --card-header: #EFF7FF;
+  --card-bg-1: #D4E3F5;
+  --card-bg-2: #F5FAFF;
+
+  --brand-text-gradient-stop-1: #4A90E2;
+  --brand-text-gradient-stop-2: #00CED1;
+
+  --cyan: #00CED1;
+  --cyan-light: #7FE5E6;
+  --cyan-lighter: #E0FBFB;
+
+  --gold: #FFD700;
+  --gold-light: #FFE948;
+  --gold-lighter: #FFFBE6;
+
+  --black: #000000;
+  --white: #ffffff;
+
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+
+
+[data-theme="ayurveda"] {
+  --primary: #F8F5F0;
+  --secondary: #9C774D;
+  --secondary-light: #D4BFA0;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #5A3E26;
+  --accent-1: #FAF7F2;
+  --accent-2: #2A2118;
+  --accent-3: #E8E0D0;
+
+--btn-bg-1: #D4BFA0;  /* Light warm beige (already secondary-light) */
+--btn-bg-2: #E8E0D0;  /* Very light beige (already accent-3) */
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #2A2118;
+  --btn-text-3: #A79E8F;
+
+  --link-col-1: #FFFFFF;
+  --link-col-2: #9C774D;
+
+  --text-1: #9C774D;
+  --text-2: #2A2118;
+  --text-3: #5A534A;
+
+  --title-color: #5A3E26;
+  --sub-title-color: #9C774D;
+  --title-color-2: #5A3E26;
+  --sub-title-color-2: #FFFFFF;
+
+  --card-header: #FFF8EE;
+  --card-bg-1: #F5EDE0;
+  --card-bg-2: #FDF9F3;
+
+  --brand-text-gradient-stop-1: #5A3E26;
+  --brand-text-gradient-stop-2: #9C774D;
+
+  --herbal: #5A8C4A;
+  --herbal-light: #A3C293;
+  --herbal-lighter: #EFF7EA;
+
+  --gold: #B38B59;
+  --gold-light: #D4BFA0;
+  --gold-lighter: #FAF7F2;
+
+  --black: #2A2118;
+  --white: #FFFFFF;
+
+  --shadow: rgba(42, 33, 24, 0.15);
+}
+
+
+[data-theme="botanical"] {
+  --primary: #FFFFFF;
+  --secondary: #6B8E23;
+  --secondary-light: #C1D7A6;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #4A6626;
+  --accent-1: #F8FBF0;
+  --accent-2: #1A2310;
+  --accent-3: #E0E8D0;
+
+--btn-bg-1: #C1D7A6;  /* Light green (already secondary-light) */
+--btn-bg-2: #E0E8D0;  /* Pale greenish beige (already accent-3) */
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #1A2310;
+  --btn-text-3: #8A9380;
+
+  --link-col-1: #FFFFFF;
+  --link-col-2: #6B8E23;
+
+  --text-1: #7A9F35;
+  --text-2: #1A2310;
+  --text-3: #4A6626;
+
+  --title-color: #4A6626;
+  --sub-title-color: #7A9F35;
+  --title-color-2: #4A6626;
+  --sub-title-color-2: #FFFFFF;
+
+  --card-header: #F7FBEE;
+  --card-bg-1: #E8F0D8;
+  --card-bg-2: #F5FAE9;
+
+  --brand-text-gradient-stop-1: #4A6626;
+  --brand-text-gradient-stop-2: #7A9F35;
+
+  --herbal: #4A8C72;
+  --herbal-light: #8FC1AC;
+  --herbal-lighter: #E8F5EF;
+
+  --gold: #C9A66B;
+  --gold-light: #E8D9B5;
+  --gold-lighter: #FFFDF5;
+
+  --black: #1A2310;
+  --white: #FFFFFF;
+
+  --shadow: rgba(26, 35, 16, 0.1);
+}
+
+
+[data-theme="golden-henna"] {
+  --primary: #FFFDFA;
+  --secondary: #C9A66B;  /* Primary gold-henna tone */
+  --secondary-light: #E8D9B5;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #B38B59;  /* Rich henna brown */
+  --accent-1: #FAF7F2;
+  --accent-2: #2A2118;  /* Deep espresso */
+  --accent-3: #E8E0D0;
+
+--btn-bg-1: #EAD9B4;  /* Soft creamy gold */
+--btn-bg-2: #D4A58A;  /* Warm muted terracotta */
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #2A2118;
+  --btn-text-3: #A79E8F;
+
+  --link-col-1: #FFFFFF;
+  --link-col-2: #C9A66B;
+
+  --text-1: #B38B59;    /* Henna brown text */
+  --text-2: #2A2118;    /* High-contrast dark */
+  --text-3: #5A534A;    /* Soft brown gray */
+
+  --title-color: #8B5A2B; /* Aged henna color */
+  --sub-title-color: #C9A66B;
+  
+  --card-header: #FFF8EE;
+  --card-bg-1: #F5EDE0;  /* Parchment light */
+  --card-bg-2: #FDF9F3;
+
+  --brand-text-gradient-stop-1: #8B5A2B;
+  --brand-text-gradient-stop-2: #C9A66B;
+
+  --herbal: #7A9F35;    /* Complementary herbal green */
+  --herbal-light: #C1D7A6;
+  --herbal-lighter: #F0F7EA;
+
+  --gold: #C9A66B;      /* Matching golds */
+  --gold-light: #E8D9B5;
+  --gold-lighter: #FFFDF5;
+
+  --black: #2A2118;
+  --white: #FFFFFF;
+
+  --shadow: rgba(42, 33, 24, 0.1);
+}
+
+
+[data-theme="spiced-henna"] {
+  --primary: #FFF9F7;
+  --secondary: #B76E79;  /* Reddish henna tone */
+  --secondary-light: #E8C4CA;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #9C4E5A;  /* Deep rose-brown */
+  --accent-1: #FDF2F0;
+  --accent-2: #2A181B;  /* Dark chocolate with red undertones */
+  --accent-3: #E8D8DA;
+
+--btn-bg-1: #E3A18D;  /* Soft terracotta rose */
+--btn-bg-2: #C86961;  /* Muted warm red */
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #2A181B;
+  --btn-text-3: #A79396;
+
+  --link-col-1: #f7dcd4;
+  --link-col-2: #f5cfc3;
+
+  --text-1: #9C4E5A;    /* Reddish brown */
+  --text-2: #2A181B;    /* Deep burgundy-black */
+  --text-3: #5A3A3E;    /* Muted plum-brown */
+
+  --title-color: #7A3C48; 
+  --sub-title-color: #B76E79;
+  
+  --card-header: #FCEFEC;
+  --card-bg-1: #F5E4E0;
+  --card-bg-2: #FDF5F3;
+
+  --brand-text-gradient-stop-1: #7A3C48;
+  --brand-text-gradient-stop-2: #C97C5D;
+
+  --herbal: #7A9F35;    /* Complementary green */
+  --herbal-light: #C1D7A6;
+  --herbal-lighter: #F0F7EA;
+
+  --spice: #C97C5D;     /* Primary spice tones */
+  --spice-light: #E8B8A8;
+  --spice-lighter: #FCEFEC;
+
+  --black: #2A181B;
+  --white: #FFFFFF;
+
+  --shadow: rgba(42, 24, 27, 0.1);
+}
+
+
+
+[data-theme="royal-mehndi"] {
+  --primary: #FFF7FA;
+  --secondary: #A05C6B;  /* Magenta-brown */
+  --secondary-light: #D4A6B3;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #7A3C48;  /* Deep wine */
+  --accent-1: #FAF0F2;
+  --accent-2: #1A0E11;  /* Black with plum undertones */
+  --accent-3: #E0D0D4;
+
+--btn-bg-1: #D6B1B8;  /* Light muted rose */
+--btn-bg-2: #A85A75;  /* Soft berry tone */
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #1A0E11;
+  --btn-text-3: #8A757A;
+
+  --link-col-1: #E8D9C333;
+  --link-col-2: #B38B591A;
+
+  --text-1: #7A3C48;    /* Wine red */
+  --text-2: #1A0E11;    /* Near-black */
+  --text-3: #5A3A40;    /* Muted mauve */
+
+  --title-color: #5A2E38; 
+  --sub-title-color: #A05C6B;
+  
+  --card-header: #F9ECF0;
+  --card-bg-1: #EDDEE2;
+  --card-bg-2: #F9F2F5;
+
+  --brand-text-gradient-stop-1: #5A2E38;
+  --brand-text-gradient-stop-2: #A05C6B;
+
+  --royal: #8C3D5D;     /* Jewel tones */
+  --royal-light: #C98BA6;
+  --royal-lighter: #F5E0EA;
+
+  --clay: #A67C7C;      /* Earthy pinks */
+  --clay-light: #D4BABA;
+  --clay-lighter: #F5EFEF;
+
+  --black: #1A0E11;
+  --white: #FFFFFF;
+
+  --shadow: rgba(26, 14, 17, 0.08);
+}
+
+[data-theme="forest-glow"] {
+  --primary: #ffffff;
+  --secondary: #C9A66B;
+  --secondary-light: #E8D9B5;
+
+  --bg-col-1: #ffffff;
+  --bg-col-2: #B38B59;
+
+  --accent-1: #f9f6f2;
+  --accent-2: #2A2118;
+  --accent-3: #e0dcc0;
+
+--btn-bg-1: #E6CFA3; /* Light gold aligned with secondary */
+--btn-bg-2: #CC6C80; /* Muted rosy tone to complement */
+
+
+  --nav-bg: #f9f6f2;
+
+  --btn-text-1: #ffffff;
+  --btn-text-2: #000000;
+  --btn-text-3: #a8a8a8;
+
+  /* Updated decorative elements using #d9c7a7 and its variants */
+  --link-col-1: #d9c7a733; /* new soft blur circle */
+  --link-col-2: #d9c7a71a; /* extra subtle */
+
+  --text-1: #B38B59;
+  --text-2: #2A2118;
+  --text-3: #5A534a;
+
+  --title-color: #0099b4;
+  --sub-title-color: #B38B59;
+  --title-color-2: #0099b4;
+  --sub-title-color-2: #ffffff;
+
+  --card-header: #fffbe6;
+  --card-bg-1: #e5c19e;
+  --card-bg-2: #f0fafd;
+
+  --brand-text-gradient-stop-1: #0099b4;
+  --brand-text-gradient-stop-2: #dab600;
+
+  --cyan: #0099b4;
+  --cyan-light: #7ed1e6;
+  --cyan-lighter: #e0f6fb;
+
+  --gold: #dab600;
+  --gold-light: #f0d948;
+  --gold-lighter: #fffbe6;
+
+  --black: #000000;
+  --white: #ffffff;
+
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+
+[data-theme="desert"] {
+  --primary: #FEFAF6;
+  --secondary: #9E6F3E;        /* Herbal cinnamon */
+  --secondary-light: #D9B089;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #7B5E3B;         /* Deep bark */
+  --accent-1: #F5EBDD;
+  --accent-2: #2F2213;
+  --accent-3: #E9D8C4;
+
+--btn-bg-1: #C8A47D;  /* Lighter golden beige for a premium look */
+--btn-bg-2: #8A5A36;  /* Rich cinnamon brown for contrast */
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #2F2213;
+  --btn-text-3: #7D6C5F;
+
+  --link-col-1: #E8D9C333;
+  --link-col-2: #B38B591A;
+
+  --text-1: #7B5E3B;
+  --text-2: #2F2213;
+  --text-3: #65513C;
+
+  --title-color: #5A4028;
+  --sub-title-color: #9E6F3E;
+
+  --card-header: #F8F0E4;
+  --card-bg-1: #EAD9C3;
+  --card-bg-2: #F8F3EB;
+
+  --brand-text-gradient-stop-1: #5A4028;
+  --brand-text-gradient-stop-2: #9E6F3E;
+
+  --royal: #7A4E2D;
+  --royal-light: #C8A57C;
+  --royal-lighter: #F3E7D3;
+
+  --clay: #B7987E;
+  --clay-light: #DAC7B0;
+  --clay-lighter: #F7F2EC;
+
+  --black: #2F2213;
+  --white: #FFFFFF;
+
+  --shadow: rgba(47, 34, 19, 0.08);
+}
+
+[data-theme="mystic"] {
+  --primary: #F7FDF9;
+  --secondary: #3F6B47;        /* Forest moss */
+  --secondary-light: #9ABBA5;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #295238;
+  --accent-1: #EAF6ED;
+  --accent-2: #112B1B;
+  --accent-3: #CFE4D6;
+
+--btn-bg-1: #AFC9B6;  /* Very light sage green */
+--btn-bg-2: #88A992;  /* Soft green (still lighter than before) */
+
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #112B1B;
+  --btn-text-3: #5E7B65;
+
+  --link-col-1: #E8D9C333;
+  --link-col-2: #B38B591A;
+
+  --text-1: #295238;
+  --text-2: #112B1B;
+  --text-3: #4D6B55;
+
+  --title-color: #1F3F2A;
+  --sub-title-color: #3F6B47;
+
+  --card-header: #E9F5EC;
+  --card-bg-1: #D8EBDD;
+  --card-bg-2: #F1F8F3;
+
+  --brand-text-gradient-stop-1: #1F3F2A;
+  --brand-text-gradient-stop-2: #3F6B47;
+
+  --royal: #3D6144;
+  --royal-light: #85B194;
+  --royal-lighter: #E7F2EC;
+
+  --clay: #9BB39D;
+  --clay-light: #C4D5C8;
+  --clay-lighter: #F1F5F0;
+
+  --black: #112B1B;
+  --white: #FFFFFF;
+
+  --shadow: rgba(17, 43, 27, 0.08);
+}
+
+
+[data-theme="blush-basil"] {
+  --primary: #FFF6F9;
+  --secondary: #AA6E7A;       /* Floral rosewood */
+  --secondary-light: #E4B7C0;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #804C56;
+  --accent-1: #FCEDEF;
+  --accent-2: #251013;
+  --accent-3: #EFDDE1;
+
+ --btn-bg-1: #E6C1C8;  /* lighter rose tone */
+--btn-bg-2: #C98794;  /* softer muted pink */
+
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #251013;
+  --btn-text-3: #8A7278;
+
+  --link-col-1: #E8D9C333;
+  --link-col-2: #B38B591A;
+
+  --text-1: #804C56;
+  --text-2: #251013;
+  --text-3: #6A4A4F;
+
+  --title-color: #5A2D35;
+  --sub-title-color: #AA6E7A;
+
+  --card-header: #FBE7EB;
+  --card-bg-1: #EDD2D8;
+  --card-bg-2: #FAEFF2;
+
+  --brand-text-gradient-stop-1: #5A2D35;
+  --brand-text-gradient-stop-2: #AA6E7A;
+
+  --royal: #A15D6D;
+  --royal-light: #D1A3AD;
+  --royal-lighter: #F7E7EA;
+
+  --clay: #B78D95;
+  --clay-light: #E0C2C9;
+  --clay-lighter: #FDF5F7;
+
+  --black: #251013;
+  --white: #FFFFFF;
+
+  --shadow: rgba(37, 16, 19, 0.08);
+}
+
+
+[data-theme="sage"] {
+  --primary: #F9FAF6;
+  --secondary: #A3936F;       /* Earthy sandal */
+  --secondary-light: #D8CBB0;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #7C6A4B;
+  --accent-1: #F2F0EA;
+  --accent-2: #1E1A11;
+  --accent-3: #DDD6C5;
+
+--btn-bg-1: #D2C4A4;  /* lighter beige-gold */
+--btn-bg-2: #B6A07C;  /* softer earthy brown */
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #1E1A11;
+  --btn-text-3: #867E6B;
+
+  --link-col-1: #E8D9C333;
+  --link-col-2: #B38B591A;
+
+  --text-1: #7C6A4B;
+  --text-2: #1E1A11;
+  --text-3: #5E5641;
+
+  --title-color: #4C4430;
+  --sub-title-color: #A3936F;
+
+  --card-header: #F5F1E8;
+  --card-bg-1: #E6DDC9;
+  --card-bg-2: #F9F7F1;
+
+  --brand-text-gradient-stop-1: #4C4430;
+  --brand-text-gradient-stop-2: #A3936F;
+
+  --royal: #897751;
+  --royal-light: #CBBF9B;
+  --royal-lighter: #F4F1E5;
+
+  --clay: #B6AA91;
+  --clay-light: #E1D7C0;
+  --clay-lighter: #FAF9F4;
+
+  --black: #1E1A11;
+  --white: #FFFFFF;
+
+  --shadow: rgba(30, 26, 17, 0.08);
+}
+
+[data-theme="turmeric"] {
+  --primary: #FFFDF5;
+  --secondary: #B8903F;       /* Warm turmeric gold */
+  --secondary-light: #E9C77F;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #7F6128;
+  --accent-1: #FFF5DF;
+  --accent-2: #2A1F0C;
+  --accent-3: #F0E3C2;
+
+  --btn-bg-1: #D5A854;
+  --btn-bg-2: #A97C2A;
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #2A1F0C;
+  --btn-text-3: #8D764F;
+
+  --link-col-1: #E8D9C333;
+  --link-col-2: #B38B591A;
+
+  --text-1: #7F6128;
+  --text-2: #2A1F0C;
+  --text-3: #5E4921;
+
+  --title-color: #4A3718;
+  --sub-title-color: #B8903F;
+
+  --card-header: #FFF1DC;
+  --card-bg-1: #F2D9A9;
+  --card-bg-2: #FFF7EA;
+
+  --brand-text-gradient-stop-1: #4A3718;
+  --brand-text-gradient-stop-2: #B8903F;
+
+  --royal: #A97C2A;
+  --royal-light: #E1C17B;
+  --royal-lighter: #FFF6E4;
+
+  --clay: #CBAF80;
+  --clay-light: #EEDCB2;
+  --clay-lighter: #FFFDF4;
+
+  --black: #2A1F0C;
+  --white: #FFFFFF;
+
+  --shadow: rgba(42, 31, 12, 0.08);
+}
+
+[data-theme="earth"] {
+  --primary: #FAF6F4;
+  --secondary: #7C4C29;         /* Deep earth brown */
+  --secondary-light: #B68C6B;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #5B3A20;
+  --accent-1: #EFE7E1;
+  --accent-2: #1C1208;
+  --accent-3: #D9C5B4;
+
+  --btn-bg-1: #A6784F;
+  --btn-bg-2: #6A3F1C;
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #1C1208;
+  --btn-text-3: #8B6F58;
+
+  --text-1: #5B3A20;
+  --text-2: #1C1208;
+  --text-3: #6D5034;
+
+  --title-color: #402614;
+  --sub-title-color: #7C4C29;
+
+  --card-header: #F4EAE3;
+  --card-bg-1: #E4D3C2;
+  --card-bg-2: #FAF5F0;
+
+  --brand-text-gradient-stop-1: #402614;
+  --brand-text-gradient-stop-2: #7C4C29;
+
+  --royal: #6A3F1C;
+  --royal-light: #C39774;
+  --royal-lighter: #F6E7DB;
+
+  --clay: #AD8D70;
+  --clay-light: #D8C1A8;
+  --clay-lighter: #F9F3EC;
+
+  --black: #1C1208;
+  --white: #FFFFFF;
+
+  --shadow: rgba(28, 18, 8, 0.08);
+}
+
+
+[data-theme="saffron"] {
+  --primary: #FFF8F0;
+  --secondary: #D88A1C;       /* Pure saffron-orange */
+  --secondary-light: #F5BD6A;
+
+  --bg-col-1: #FFFFFF;
+  --bg-col-2: #AF6B11;
+  --accent-1: #FFF0D9;
+  --accent-2: #2E1C08;
+  --accent-3: #FFE6C1;
+
+  --btn-bg-1: #EDA43C;
+  --btn-bg-2: #B76C10;
+
+  --nav-bg: #FFFFFF;
+
+  --btn-text-1: #FFFFFF;
+  --btn-text-2: #2E1C08;
+  --btn-text-3: #9E7746;
+
+  --text-1: #AF6B11;
+  --text-2: #2E1C08;
+  --text-3: #805A29;
+
+  --title-color: #5A370F;
+  --sub-title-color: #D88A1C;
+
+  --card-header: #FFF3DE;
+  --card-bg-1: #FFE2B5;
+  --card-bg-2: #FFF8EC;
+
+  --brand-text-gradient-stop-1: #5A370F;
+  --brand-text-gradient-stop-2: #D88A1C;
+
+  --royal: #B76C10;
+  --royal-light: #F5BC6C;
+  --royal-lighter: #FFF6E6;
+
+  --clay: #D9AC79;
+  --clay-light: #F0D6AC;
+  --clay-lighter: #FFFDF6;
+
+  --black: #2E1C08;
+  --white: #FFFFFF;
+
+  --shadow: rgba(46, 28, 8, 0.08);
+}

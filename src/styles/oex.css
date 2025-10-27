@@ -1,0 +1,27 @@
+[data-theme="oex"] {
+  --primary: #120f1c;
+  --secondary: #475ee9;
+  --bg-col-1: #161321;
+  --bg-col-2: #120f1c;
+  --accent-1: #abcefd;
+  --accent-2: #ffa800;
+  --btn-bg-1: #475ee9;
+  --btn-bg-2: #3a4ec5;
+  --nav-bg: #120f1c;
+  --link-col-1: #7eb3ff;
+  --link-col-2: #ffffff;
+  --shadow: #000000;
+  --btn-text-1: #ffffff;
+  --card-header: #abcefd;
+  --btn-text-2: #cfcfd1;
+  --title-color: #e5e7eb ;  
+  --sub-title-color: #534365;
+  --text-1: #ffffff;
+  --text-2: #5c499e;
+  --text-3: #161321;
+  --card-bg-1: #120f1c;
+  --card-bg-2: #3a4ec5;
+  --brand-text-gradient-stop-1: #abcefd;
+  --brand-text-gradient-stop-2: #4459ec;
+
+}
